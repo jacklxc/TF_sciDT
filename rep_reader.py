@@ -1,11 +1,11 @@
 import gzip
 import numpy
-from tqdm import tqdm
+#from tqdm import tqdm
 
 class RepReader(object):
     def __init__(self, embedding_file):
         self.word_rep = {}
-        for x in tqdm(gzip.open(embedding_file)):
+        for x in gzip.open(embedding_file):
             x_parts = x.strip().split()
             if len(x_parts) == 2:
                 continue

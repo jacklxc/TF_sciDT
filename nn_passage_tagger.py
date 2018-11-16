@@ -258,7 +258,7 @@ class PassageTagger(object):
         #tagger.fit(X, Y, validation_split=0.1, epochs=100, callbacks=[early_stopping], batch_size=10)
 
         #tagger.fit(X, Y, validation_split=0.1, epochs=epoch, batch_size=10, callbacks = [LearningRateScheduler(step_decay)])
-        tagger.fit(X, Y, validation_split=0.1, epochs=epoch, batch_size=1)
+        tagger.fit(X, Y, validation_split=0.1, epochs=epoch, batch_size=10)
         tagger.summary()
         return tagger
 
